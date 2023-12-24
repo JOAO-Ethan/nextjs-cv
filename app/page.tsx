@@ -1,94 +1,37 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from '@/app/page.module.css'
+import Card from '@/app/ui/card'
 
 export default function Home() {
+  const mail: string = "3than.joao@gmail.com";
+  const age: number = Math.floor((new Date().getTime() - new Date(2003, 7, 3).getTime()) / (1000 * 60 * 60 * 24 * 365.25));
+  const mobilite: string[] = ["Béthune", "Lens", "Lille"]
+  const linkedin = "https://www.linkedin.com/in/ethan-joao/"
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+      <div>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+          src={'/profil.png'}
+          alt={'Ma photographie.'}
+          width={250}
+          height={186}
+          className={styles.profil} />
+        <div className={styles.presentation}>
+          <p>Je suis Ethan Joao, actuellement étudiant en 3ème année de BUT Informatique à l&apos;Institut Universitaire Technologique de Lens et donc futur développeur !</p>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            J’apprécie énormément développer et apprendre durant mon temps libre, je suis actuellement en train de m&apos;initier au japonais et au portugais grâce à Duolinguo et de développer une base de données pour organiser une collection minéralogique.
+            Je suis féru de lecture et lis des genres variés, allant de la science-fiction jusqu&apos;à la philosophie en passant par les mangas !
           </p>
-        </a>
+          <Card title={'Contact'} content={<>
+            <div className={styles.infos}>
+              <span>Mail : <a href={`mailto://${mail}`} title="M'envoyer un mail">{mail}</a></span>
+              <span>Age : {age} ans</span>
+              <span>Permis + voiture</span>
+              <span>Mobilités: {mobilite.join(', ')}</span>
+              <span><a href={linkedin} title='Lien vers ma page LinkedIn'>LinkedIn</a></span>
+            </div>
+          </>} key={0} />
+        </div>
       </div>
     </main>
   )

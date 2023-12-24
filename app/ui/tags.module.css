@@ -1,0 +1,12 @@
+.tagsWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+.tag{
+    background-color: #262626;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 12px;
+}

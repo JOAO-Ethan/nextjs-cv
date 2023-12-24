@@ -1,0 +1,38 @@
+.card {
+    border-radius: 0.75rem;
+    background-color: #0D0D0D;
+    padding: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardTitle {
+    padding: 1rem;
+}
+
+.cardTitle h3 {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.cardBody {
+    border-radius: 0.75rem;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    background-color: #595959;
+    color: #F2F2F2;
+    padding: 1rem 1rem;
+    text-align:start;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    height: 1fr;
+    flex-grow: 1;
+}
+
+.cardBody a:hover, .cardBody a:focus{
+    color: #0D0D0D;
+}

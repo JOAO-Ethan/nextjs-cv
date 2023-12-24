@@ -1,0 +1,31 @@
+.skill{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillPoint{
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    vertical-align: bottom;
+}
+
+.full{
+    background-color: #F2F2F2;
+}
+
+.empty{
+    background-color: black;
+}
+
+.pointsWrapper{
+    display: flex;
+    gap: 5%;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+.skillName{
+    min-width: 25%;
+}
