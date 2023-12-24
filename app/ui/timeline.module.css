@@ -36,23 +36,29 @@
     padding: 5px 0px 15px 0px;
     font-size: 15px;
     max-width: 60%;
-    text-align:start;
+    text-align: start;
 }
 
-.timeline li:before{
-    position:absolute;
-    content:'';
-    width:10px;
-    height:10px;
-    background-color:#F2F2F2;
-    border-radius:50%;
-    left:-11px;
-    top:28px;
-  }
+.timeline li:before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    left: -11px;
+    top: 28px;
+}
 
 
-  @media (max-width: 1120px) {
-    .timeline{
+@media (max-width: 1120px) {
+    .timeline {
         margin-left: 30%;
     }
-  }
+}
+
+@media print {
+    .timeline li::before{
+        background-color: #0D0D0D;
+    }
+}

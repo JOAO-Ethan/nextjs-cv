@@ -36,3 +36,15 @@
 .cardBody a:hover, .cardBody a:focus{
     color: #0D0D0D;
 }
+
+@media print {
+    .card {
+        background-color: #595959;
+        color: #F2F2F2;
+    }
+
+    .cardBody{
+        background-color: #A6A6A6;
+        color: #0D0D0D;
+    }
+}

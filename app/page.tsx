@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from '@/app/page.module.css'
 import Card from '@/app/ui/card'
+import print from '@/app/ui/print.module.css'
 
 export default function Home() {
   const mail: string = "3than.joao@gmail.com";
@@ -13,8 +14,8 @@ export default function Home() {
         <Image
           src={'/profil.png'}
           alt={'Ma photographie.'}
-          width={250}
-          height={186}
+          width={256}
+          height={190}
           className={styles.profil} />
         <div className={styles.presentation}>
           <p>Je suis Ethan Joao, actuellement étudiant en 3ème année de BUT Informatique à l&apos;Institut Universitaire Technologique de Lens et donc futur développeur !</p>
@@ -28,7 +29,9 @@ export default function Home() {
               <span>Age : {age} ans</span>
               <span>Permis + voiture</span>
               <span>Mobilités: {mobilite.join(', ')}</span>
-              <span><a href={linkedin} title='Lien vers ma page LinkedIn'>LinkedIn</a></span>
+              <span><a href={linkedin} title='Lien vers ma page LinkedIn'>LinkedIn</a>
+                <span className={print.printLink}> : {linkedin}</span>
+              </span>
             </div>
           </>} key={0} />
         </div>

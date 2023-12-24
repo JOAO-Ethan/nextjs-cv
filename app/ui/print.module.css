@@ -1,0 +1,10 @@
+.printLink{
+    display: none;
+}
+
+@media print {
+    .printLink{
+        display: inline;
+        font-size: 10pt;
+    }
+}

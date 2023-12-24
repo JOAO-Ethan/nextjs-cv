@@ -26,3 +26,14 @@ h1 {
   margin-bottom: 1%;
   margin-top: 1rem;
 }
+
+@media print {
+  body{
+    background-color: #F2F2F2;
+    color: #262626;
+    font-family: serif;
+    font-size: 15pt;
+    margin: 0;
+    border: none;
+  }
+}

@@ -1,4 +1,5 @@
 import styles from '@/app/skills/skill.module.css'
+import print from '@/app/ui/print.module.css'
 export interface Skill {
     key: number, 
     name: string, 
@@ -18,7 +19,9 @@ export default function SkillProgress(skill: Skill) {
         <div className={styles.skill}>
             <p className={styles.skillName}>{skill.name}</p>
             <div className={styles.pointsWrapper}>
-                {points.map((point, idx) => <div key={idx} className={point}></div>)}
+                {points.map((point, idx) => <div key={idx} className={point}>
+                </div>)}
+                <span className={print.printLink}>{skill.grade}/{skill.maxGrade}</span>
             </div>
         </div>
     )

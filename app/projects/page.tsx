@@ -1,4 +1,5 @@
 import styles from '@/app/projects/projects.module.css'
+import print from '@/app/ui/print.module.css'
 import Card from '@/app/ui/card';
 import Tags from '@/app/ui/tags';
 
@@ -50,22 +51,27 @@ export default function Projects() {
         <main>
             <h1>Mes projets</h1>
             <h2>
-                <a href={github} className={styles.githubLink} title="Ma page GitHub contenant tous mes projets">GitHub</a>
+                <a href={github} className={styles.githubLink} title="Ma page GitHub contenant tous mes projets">
+                    GitHub
+                    <span className={print.printLink}> : {github}</span>
+                </a>
             </h2>
             <div className={styles.wrapper}>
                 {projects.map((p, idx) =>
                     <Card
                         key={p.key}
                         className={idx === projects.length - 1 && !!(projects.length % 3) ? styles.last : ''}
-                        title={p.link ? <a href={p.link.href} title={p.link.title}>{p.title}</a> : p.title} content={
-                            <div className={styles.project}>
-                                <p>
-                                    {p.description}
-                                </p>
-                                <div>
-                                    <Tags tags={p.tags} />
-                                </div>
-                            </div>}
+                        title={p.link ?
+                            <a href={p.link.href} title={p.link.title}>{p.title} <span className={print.printLink}> : {p.link.href}</span></a>
+                            : p.title} content={
+                                <div className={styles.project}>
+                                    <p>
+                                        {p.description}
+                                    </p>
+                                    <div>
+                                        <Tags tags={p.tags} />
+                                    </div>
+                                </div>}
                     />)}
             </div>
         </main>
