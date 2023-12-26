@@ -18,7 +18,8 @@ export default function SkillProgress(skill: Skill) {
     return (
         <div className={styles.skill}>
             <p className={styles.skillName}>{skill.name}</p>
-            <div className={styles.pointsWrapper}>
+            <div className={styles.pointsWrapper}
+                    title={skill.grade + " sur "+skill.maxGrade}>
                 {points.map((point, idx) => <div key={idx} className={point}>
                 </div>)}
                 <span className={print.printLink}>{skill.grade}/{skill.maxGrade}</span>
